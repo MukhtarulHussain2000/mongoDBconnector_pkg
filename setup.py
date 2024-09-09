@@ -1,9 +1,16 @@
 from setuptools import setup, find_packages
 from typing import List
+import os
 
-def parse_requirements(filename:str) -> List[str]:
-    with open(filename, 'r', encoding='utf-8') as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith('#') and not line.startswith('-e')]
+def parse_requirements(filename: str) -> List[str]:
+     if os.path.isfile(filename):
+          with open(filename, 'r', encoding='utf-8') as f:
+               return [
+                    line.strip() for line in f 
+                    if line.strip() and not line.startswith('#') and not line.startswith('-e')
+          ]
+          
+          return []
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
