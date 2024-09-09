@@ -2,21 +2,21 @@ from setuptools import setup, find_packages
 from typing import List
 import os
 
-def parse_requirements(filename: str) -> List[str]:
-     if os.path.isfile(filename):
-          with open(filename, 'r', encoding='utf-8') as f:
-               return [
-                    line.strip() for line in f 
-                    if line.strip() and not line.startswith('#') and not line.startswith('-e')
-          ]
+# def parse_requirements(filename: str) -> List[str]:
+#      if os.path.isfile(filename):
+#           with open(filename, 'r', encoding='utf-8') as f:
+#                return [
+#                     line.strip() for line in f 
+#                     if line.strip() and not line.startswith('#') and not line.startswith('-e')
+#           ]
           
-     return []
+#      return []
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
    
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 REPO_NAME = "mongoDBconnector_pkg"
 PKG_NAME= "databaseConnectorUniversal"
 AUTHOR_USER_NAME = "MukhtarulHussain2000"
@@ -36,7 +36,11 @@ setup(
      },
      package_dir={"": "src"},
      packages=find_packages(where="src"),
-     install_requires=parse_requirements('requirements.txt'),
+     # install_requires=parse_requirements('requirements.txt'),
+     install_requires = ["pymongo", "dnspython", "pandas", "numpy", "ensure", "pytest"]
+     
+
+
 )
 
 
