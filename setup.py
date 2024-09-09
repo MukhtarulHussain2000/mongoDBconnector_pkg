@@ -18,7 +18,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 __version__ = "0.0.1"
 REPO_NAME = "mongoDBconnector_pkg"
-PKG_NAME= "databaseConnector2000"
+PKG_NAME= "databaseConnectorUniversal"
 AUTHOR_USER_NAME = "MukhtarulHussain2000"
 AUTHOR_EMAIL = "mukhtarulhussainofficial@gmail.com"
 
