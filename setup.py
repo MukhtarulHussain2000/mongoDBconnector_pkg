@@ -10,7 +10,7 @@ def parse_requirements(filename: str) -> List[str]:
                     if line.strip() and not line.startswith('#') and not line.startswith('-e')
           ]
           
-          return []
+     return []
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
