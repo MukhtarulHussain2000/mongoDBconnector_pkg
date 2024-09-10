@@ -16,7 +16,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
    
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 REPO_NAME = "mongoDBconnector_pkg"
 PKG_NAME= "databaseConnectorUniversal"
 AUTHOR_USER_NAME = "MukhtarulHussain2000"
